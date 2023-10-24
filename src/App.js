@@ -1,20 +1,9 @@
 import React from 'react';
 import './App.css';
 import {Routes, Route, useNavigate} from 'react-router-dom';
-
-
-const Login = () => {
-  return (<h2>Login</h2>)
-}
-
-const FriendsList = () => {
-  return (<h2>Friends List</h2>)
-}
-
-const AddFriend = () => {
-  return (<h2>Add Friend!</h2>)
-}
-
+import Login from './components/Login';
+import FriendsList from './components/FriendsList';
+import AddFriend from './components/AddFriend';
 
 
 function App() {
@@ -24,7 +13,7 @@ function App() {
         <Route path="/" element={<Login/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/friends" element={<FriendsList/>}/>
-        <Route path="/friendsadd" element={<AddFriend/>}/>
+        <Route path="/friends/add" element={<AddFriend/>}/>
       </Routes>
       </div>
   );
