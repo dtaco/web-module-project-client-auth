@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
 import axios from 'axios';
 
 const FriendsList = () => {
 
-    const [ friends, setFriends] = useState([]);
+    const [ friends, setFriends ] = useState([]);
     const token = localStorage.getItem("token");
 
+    if(!token) {
+        return <Navigate to="/login"/>
+    }
 
     useEffect(() => {
         axios.get('http://localhost:9000/api/friends', {

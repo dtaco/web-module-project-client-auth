@@ -8,6 +8,10 @@ import Logout from './components/Logout';
 
 
 function App() {
+
+  const token = localStorage.getItem('token');
+
+
   return (
       <div className="App">
         <header>
@@ -20,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/friends" element={<FriendsList/>}/>
+        <Route path="/friends" element={<FriendsList/>}/> 
         <Route path="/friends/add" element={<AddFriend/>}/>
         <Route path="/logout" element={<Logout/>}/>
       </Routes>
