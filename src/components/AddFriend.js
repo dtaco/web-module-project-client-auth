@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AddFriend = () => {
+    const [form, setForm] = useState({
+        name: "",
+        age:"",
+        email: ""
+    })
     return (
         <div>
             <h2>Add Friend!</h2>
